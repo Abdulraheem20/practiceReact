@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "../component/styles/form.css";
 
-const form = () => {
-  let [input1, setInput1] = useState("");
-  let [input2, setInput2] = useState("");
-  let [input3, setInput3] = useState("");
-  let [input4, setInput4] = useState("");
-  // let [display, setDisplay] = useState("");
-  let data = [];
+const Form = () => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+    phone: "",
+    msg: "",
+  });
+  // const [display, setDisplay] = useState("");
+  // const data = [];
   return (
     <div>
       <div className="form">
@@ -17,9 +20,9 @@ const form = () => {
             <input
               type="text"
               placeholder="Username@example"
-              value={input1}
+              value={data.name}
               onChange={(e) => {
-                setInput1(e.target.value);
+                setData({ ...data, name: e.target.value });
               }}
             />
           </div>
@@ -28,9 +31,20 @@ const form = () => {
             <input
               type="email"
               placeholder="example@gmail.com"
-              value={input2}
+              value={data.email}
               onChange={(e) => {
-                setInput2(e.target.value);
+                setData({ ...data, email: e.target.value });
+              }}
+            />
+          </div>
+          <div className="container">
+            <label htmlFor="email">Phone-number</label>
+            <input
+              type="number"
+              placeholder="telephone"
+              value={data.phone}
+              onChange={(e) => {
+                setData({ ...data, phone: e.target.value });
               }}
             />
           </div>
@@ -39,39 +53,48 @@ const form = () => {
             <input
               type="password"
               placeholder="@password#"
-              value={input3}
+              value={data.password}
               onChange={(e) => {
-                setInput3(e.target.value);
+                setData({ ...data, password: e.target.value });
               }}
             />
           </div>
-          <div className="container">
-            <label htmlFor="email">Confirm Password</label>
-            <input
-              type="password"
-              placeholder="@password#"
-              value={input4}
+          <div className="message">
+            <textarea
+              name="message"
+              id=""
+              cols="30"
+              rows="100%"
+              value={data.msg}
               onChange={(e) => {
-                setInput4(e.target.value);
+                setData({ ...data, msg: e.target.value });
               }}
-            />
+            >
+              Message
+            </textarea>
           </div>
           <button
             className="submitBtn"
             onClick={(e) => {
               e.preventDefault();
-              data.push(`[Username: ${input1}, Email-address: ${input2}, Password: ${input3}, Password: ${input4} ]`);
+              // data.push(
+              //   `{Username: ${input1}, Email-address: ${input2}, Password: ${input3}, Password: ${input4}}`
+              // );
+              {JSON.stringify(data)}
+              // <h2>{JSON.stringify(data)}</h2>
               console.log(data);
               // setDisplay(data)
             }}
           >
             Submit
           </button>
-          {/* <h5>{display}</h5> */}
+          
         </form>
       </div>
+      <h2>My name is - {data.name}</h2>
+      <h2>My email is -{data.email}</h2>
     </div>
   );
 };
 
-export default form;
+export default Form;
