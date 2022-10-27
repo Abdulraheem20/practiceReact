@@ -1,63 +1,74 @@
-@media (min-width: 800px){
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .footer{
-        display: flex;
-        flex-wrap: wrap;
-        /* justify-content: space-between; */
-        gap: 50%;
-        padding: 0 20%;
-        background: rgb(34,80,195);
-        background: linear-gradient(0deg, rgba(34,80,195,1) 10%, rgba(42,227,235,1) 100%);
-    }
-    .footer h1{
-        font-size: 250%;
-        color: white;
-    }
-    .social-media{
-        display: flex;
-        /* flex-wrap: wrap; */
-        margin-top: 7px;
-        gap: 30%;
-    }
-    .fb, .insta, .tweet{
-        font-size: 250%;
-        color: white;
-        padding-bottom: 4%;
-    }
+@media (min-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    gap: 50%;
+    padding: 0 20%;
+    background: rgb(34, 80, 195);
+    background: linear-gradient(
+      0deg,
+      rgba(34, 80, 195, 1) 10%,
+      rgba(42, 227, 235, 1) 100%
+    );
+  }
+  .footer h1 {
+    font-size: 250%;
+    color: white;
+  }
+  .social-media {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin-top: 7px;
+    gap: 30%;
+  }
+  .fb,
+  .insta,
+  .tweet {
+    font-size: 250%;
+    color: white;
+    padding-bottom: 4%;
+  }
 }
-@media (max-width: 799px){
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    .footer{
-        display: block;
-        /* justify-content: space-between; */
-        gap: 30%;
-        padding: 0 20%;
-        background: rgb(34,80,195);
-        background: linear-gradient(0deg, rgba(34,80,195,1) 10%, rgba(42,227,235,1) 100%);
-    }
-    .footer h1{
-        font-size: 250%;
-        color: white;
-    }
-    .social-media{
-        display: block;
-        /* flex-wrap: wrap; */
-        margin-top: 7%;
-        /* gap: 10%; */
-        position: 50%;
-    }
-    .fb, .insta, .tweet{
-        font-size: 350%;
-        color: white;
-        padding-bottom: 4%;
-    }
-
+@media (max-width: 799px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .footer {
+    display: block;
+    /* justify-content: space-between; */
+    gap: 30%;
+    padding: 0 20%;
+    background: rgb(34, 80, 195);
+    background: linear-gradient(
+      0deg,
+      rgba(34, 80, 195, 1) 10%,
+      rgba(42, 227, 235, 1) 100%
+    );
+  }
+  .footer h1 {
+    font-size: 250%;
+    color: white;
+  }
+  .social-media {
+    display: block;
+    /* flex-wrap: wrap; */
+    margin-top: 7%;
+    /* gap: 10%; */
+    position: 50%;
+  }
+  .fb,
+  .insta,
+  .tweet {
+    font-size: 350%;
+    color: white;
+    padding-bottom: 4%;
+  }
 }
