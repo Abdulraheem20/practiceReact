@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import avarter from "../images/profile-pic (4).png";
 import "../component/styles/NavBarr.css";
-import { TiThMenu } from 'react-icons/ti';
-import {GrClose} from 'react-icons/gr'
-
+import { TiThMenu } from "react-icons/ti";
+import { GrClose } from "react-icons/gr";
 
 const NavBarr = () => {
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-    const showHandler=()=>{
-        setShow(!show);
-    }
+  const showHandler = () => {
+    setShow(!show);
+  };
   return (
     <div>
       <nav>
@@ -21,10 +20,10 @@ const NavBarr = () => {
             </h1>
           </div>
           <div className="nav-links">
-            <ul className={show? "navItemsSmall": "navItems"}>
+            <ul className={show ? "navItemsSmall" : "navItems"}>
               <li>
                 <a href="#" className="navLink">
-                  Home 
+                  Home
                 </a>
               </li>
               <li>
@@ -50,9 +49,27 @@ const NavBarr = () => {
             </ul>
           </div>
           <div className="iconBtns">
-          <button onClick={showHandler}>
-            {show? <GrClose style={{backgroundColor: 'red', fontSize: '30px', borderRadius: '10px'}} className="closeShow closeHidden"/>: <TiThMenu style={{backgroundColor: 'white', fontSize: '40px', borderRadius: '10px'}} className="menuShow menuHidden" />}
-          </button>
+            <button onClick={showHandler}>
+              {show ? (
+                <GrClose
+                  style={{
+                    backgroundColor: "red",
+                    fontSize: "30px",
+                    borderRadius: "10px",
+                  }}
+                  className="closeShow closeHidden"
+                />
+              ) : (
+                <TiThMenu
+                  style={{
+                    backgroundColor: "white",
+                    fontSize: "40px",
+                    borderRadius: "10px",
+                  }}
+                  className="menuShow menuHidden"
+                />
+              )}
+            </button>
           </div>
           <div className="profile avarterHidden avarterShow">
             <img src={avarter} alt="averter" className="avarter" />
