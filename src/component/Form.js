@@ -9,8 +9,7 @@ const Form = () => {
     phone: "",
     msg: "",
   });
-  // const [display, setDisplay] = useState("");
-  // const data = [];
+
   return (
     <div>
       <div className="form">
@@ -80,7 +79,9 @@ const Form = () => {
               // data.push(
               //   `{Username: ${input1}, Email-address: ${input2}, Password: ${input3}, Password: ${input4}}`
               // );
-              {JSON.stringify(data)}
+              {
+                JSON.stringify(data);
+              }
               // <h2>{JSON.stringify(data)}</h2>
               console.log(data);
               // setDisplay(data)
@@ -88,7 +89,6 @@ const Form = () => {
           >
             Submit
           </button>
-          
         </form>
       </div>
       <h2>My name is - {data.name}</h2>
