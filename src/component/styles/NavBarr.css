@@ -58,6 +58,9 @@
   font-size: larger;
   color: black;
 }
+.active{
+  background-color:antiquewhite ;
+}
 .small-screen {
   display: grid;
 }
@@ -71,6 +74,9 @@
     justify-content: space-around;
     background-color: gray;
     height: 45px;
+  }
+  .active{
+    background-color:antiquewhite ;
   }
   .navItems {
     display: none;

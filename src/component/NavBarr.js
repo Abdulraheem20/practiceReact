@@ -3,6 +3,7 @@ import avarter from "../images/profile-pic (4).png";
 import "../component/styles/NavBarr.css";
 import { TiThMenu } from "react-icons/ti";
 import { GrClose } from "react-icons/gr";
+import { NavLink } from "react-router-dom";
 
 const NavBarr = () => {
   const [show, setShow] = useState(false);
@@ -16,35 +17,35 @@ const NavBarr = () => {
         <div className="navbar">
           <div className="logo">
             <h1>
-              <a href="">LOGO</a>
+              <NavLink href="">LOGO</NavLink>
             </h1>
           </div>
           <div className="nav-links">
             <ul className={show ? "navItemsSmall" : "navItems"}>
               <li>
-                <a href="#" className="navLink">
+                <NavLink to="/" className="navLink">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="navLink">
+              <NavLink to="/about" className="navLink">
                   About
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="navLink">
-                  Contact
-                </a>
+              <NavLink to="/product" className="navLink">
+                  Products
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="navLink">
+              <NavLink to="/info" className="navLink">
                   Info
-                </a>
+                </NavLink>
               </li>
               <li>
-                <a href="#" className="navLink">
-                  Testimonials
-                </a>
+              <NavLink to="/testimonial" className="navLink">
+                  Testimonial
+                </NavLink>
               </li>
             </ul>
           </div>

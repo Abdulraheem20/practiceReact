@@ -1,0 +1,8 @@
+.linP{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.linP li{
+    list-style-type: none;
+}

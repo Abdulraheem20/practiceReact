@@ -6,6 +6,7 @@ import ShopDisplay from "./ShopDisplay";
 const ShopDis = (itr, id) => {
   return (
     <ShopDisplay
+      id={id}
       key={itr.img}
       img={itr.img}
       title={itr.title}
@@ -17,9 +18,7 @@ const ShopDis = (itr, id) => {
 const Shop = () => {
   return (
     <div>
-      <div className="productContainer">
-        {products.map(ShopDis)}
-      </div>
+      <div className="productContainer">{products.map(ShopDis)}</div>
     </div>
   );
 };

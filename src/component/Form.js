@@ -79,9 +79,9 @@ const Form = () => {
               // data.push(
               //   `{Username: ${input1}, Email-address: ${input2}, Password: ${input3}, Password: ${input4}}`
               // );
-              {
-                JSON.stringify(data);
-              }
+              // {
+              //   JSON.stringify(data);
+              // }
               // <h2>{JSON.stringify(data)}</h2>
               console.log(data);
               // setDisplay(data)
