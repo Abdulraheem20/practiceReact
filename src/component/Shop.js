@@ -7,7 +7,7 @@ const ShopDis = (itr, id) => {
   return (
     <ShopDisplay
       id={id}
-      key={itr.img}
+      key={itr.title}
       img={itr.img}
       title={itr.title}
       price={itr.price}

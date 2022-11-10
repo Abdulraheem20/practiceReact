@@ -13,12 +13,16 @@ import Testimonial from "./component/productFiles/Testimonial";
 import NewProduct from "./component/productFiles/NewProduct";
 import PopularProduct from "./component/productFiles/PopularProduct";
 import ProductDesc from "./component/productFiles/ProductDesc";
+import Login from "./component/pages/Login";
+import { AppProvider } from "./component/Utilities/auth";
+import { RequiredAuth } from "./component/Utilities/RequiredAuth";
 // import RandNumm from './component/RandNumm';
 // import Shop from './component/Shop';
 
 function App() {
   return (
     <div className="App">
+      <AppProvider>
       {/* 
       // <Form/>
       // <Shop/>
@@ -29,10 +33,11 @@ function App() {
         <NavBarr />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/about" element={<About />} />
           <Route path="/product" element={<Product />} />
           {/* <Route path="/testimonial" element={<Testimonial/>}/> */}
-          <Route path="/testimonial" element={<Testimonial/>}> 
+          <Route path="/testimonial" element={<RequiredAuth><Testimonial/></RequiredAuth>}> 
           <Route path="newproduct" element={<NewProduct/>} />
           <Route path="newproduct/:id" element={<ProductDesc/>} />
           <Route path="popular" element={<PopularProduct/>} />
@@ -41,6 +46,7 @@ function App() {
         </Routes>
         <FooterMQ />
       </Router>
+      </AppProvider>
     </div>
   );
 }

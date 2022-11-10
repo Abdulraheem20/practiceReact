@@ -1,12 +1,12 @@
-import React from 'react'
-import FakeStore from '../FakeStore'
+import React from "react";
+import FakeStore from "../FakeStore";
 
 const About = () => {
   return (
     <div>
-        <FakeStore/>
+      <FakeStore />
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

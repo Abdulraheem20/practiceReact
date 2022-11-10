@@ -3,11 +3,17 @@ import avarter from "../images/profile-pic (4).png";
 import "../component/styles/NavBarr.css";
 import { TiThMenu } from "react-icons/ti";
 import { GrClose } from "react-icons/gr";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
+import { useAuth } from "./Utilities/auth";
 
 const NavBarr = () => {
   const [show, setShow] = useState(false);
-
+  const auth = useAuth();
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    auth.logout();
+    navigate("/");
+  };
   const showHandler = () => {
     setShow(!show);
   };
@@ -17,33 +23,44 @@ const NavBarr = () => {
         <div className="navbar">
           <div className="logo">
             <h1>
-              <NavLink href="">LOGO</NavLink>
+              <Link to="/">LOGO</Link>
             </h1>
           </div>
           <div className="nav-links">
             <ul className={show ? "navItemsSmall" : "navItems"}>
+              <li>
+                {auth.user1 ? (
+                  <p className="navLink" onClick={handleLogout}>
+                    Logout
+                  </p>
+                ) : (
+                  <NavLink to="/login" className="navLink">
+                    Login
+                  </NavLink>
+                )}
+              </li>
               <li>
                 <NavLink to="/" className="navLink">
                   Home
                 </NavLink>
               </li>
               <li>
-              <NavLink to="/about" className="navLink">
+                <NavLink to="/about" className="navLink">
                   About
                 </NavLink>
               </li>
               <li>
-              <NavLink to="/product" className="navLink">
+                <NavLink to="/product" className="navLink">
                   Products
                 </NavLink>
               </li>
               <li>
-              <NavLink to="/info" className="navLink">
+                <NavLink to="/info" className="navLink">
                   Info
                 </NavLink>
               </li>
               <li>
-              <NavLink to="/testimonial" className="navLink">
+                <NavLink to="/testimonial" className="navLink">
                   Testimonial
                 </NavLink>
               </li>
