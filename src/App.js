@@ -34,8 +34,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login/>} />
-          <Route path="/about" element={<About />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/about" element={<RequiredAuth><About /></RequiredAuth>} />
+          <Route path="/product" element={<RequiredAuth> <Product /></RequiredAuth>} />
           {/* <Route path="/testimonial" element={<Testimonial/>}/> */}
           <Route path="/testimonial" element={<RequiredAuth><Testimonial/></RequiredAuth>}> 
           <Route path="newproduct" element={<NewProduct/>} />

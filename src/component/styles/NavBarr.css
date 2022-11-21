@@ -77,6 +77,8 @@
   }
   .active{
     background-color:antiquewhite ;
+    width:max-content;
+
   }
   .navItems {
     display: none;
@@ -104,7 +106,7 @@
     align-items: flex-start;
     transition: 1s;
     background-color: beige;
-    height: 230px;
+    height:max-content ;
     width: 140px;
     padding: 10px;
     list-style-type: none;

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import avarter from "../images/profile-pic (4).png";
 import "../component/styles/NavBarr.css";
 import { TiThMenu } from "react-icons/ti";
-import { GrClose } from "react-icons/gr";
+import { MdOutlineCancel } from "react-icons/md";
 import { NavLink, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "./Utilities/auth";
 
@@ -67,11 +67,10 @@ const NavBarr = () => {
             </ul>
           </div>
           <div className="iconBtns">
-            <button onClick={showHandler}>
+            <div onClick={showHandler}>
               {show ? (
-                <GrClose
+                <MdOutlineCancel
                   style={{
-                    backgroundColor: "red",
                     fontSize: "30px",
                     borderRadius: "10px",
                   }}
@@ -87,7 +86,7 @@ const NavBarr = () => {
                   className="menuShow menuHidden"
                 />
               )}
-            </button>
+            </div>
           </div>
           <div className="profile avarterHidden avarterShow">
             <img src={avarter} alt="averter" className="avarter" />
